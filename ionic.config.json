@@ -1,5 +1,7 @@
 {
   "name": "uninutre-0.1",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
