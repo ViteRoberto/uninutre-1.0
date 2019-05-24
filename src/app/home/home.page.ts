@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { ModalController } from '@ionic/angular';
+import { InfoPage } from '../info/info.page';
 
 @Component({
   selector: 'app-home',
@@ -8,7 +10,15 @@ import { Router } from '@angular/router';
 })
 export class HomePage {
 
-  constructor(private router: Router){}
+  constructor(private router: Router, private modal: ModalController){}
+
+  async info(){
+    const modalInfo = await this.modal.create({
+      component: InfoPage,
+      componentProps: { value : 123 }
+    });
+    await modalInfo.present();
+  }
 
   ir(id){
     switch (id){

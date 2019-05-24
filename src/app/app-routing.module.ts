@@ -10,6 +10,7 @@ const routes: Routes = [
   { path: 'moderacion', loadChildren: './moderacion/moderacion.module#ModeracionPageModule' },
   { path: 'super', loadChildren: './super/super.module#SuperPageModule' },
   { path: 'menus', loadChildren: './menus/menus.module#MenusPageModule' },
+  { path: 'info', loadChildren: './info/info.module#InfoPageModule' },
 ];
 
 @NgModule({
